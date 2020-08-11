@@ -1,0 +1,8 @@
+{
+	"rewrites": [
+		{
+            "source": "/(<number>)",
+            "destination":"/$number/index.html"
+		}
+	]
+}
