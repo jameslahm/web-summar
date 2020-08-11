@@ -1,8 +1,8 @@
 {
-	"rewrites": [
+	"redirects": [
 		{
-            "source": "/(<number>)",
-            "destination":"/$number/index.html"
+            "source": "/([^/]+)",
+            "destination":"/$1/index.html"
 		}
 	]
 }
