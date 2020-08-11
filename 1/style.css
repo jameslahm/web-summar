@@ -371,7 +371,7 @@ html body {
 /*adapt mobile devices*/
 @media (max-width: 550px) {
   html {
-    --unit-width: 4px;
+    --unit-width: 3.5px;
     font-size: 14px;
   }
   #detail {
