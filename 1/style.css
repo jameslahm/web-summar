@@ -20,6 +20,7 @@ html {
   --text--icon: #b85a54;
   --unit-width: 5px;
   --white: #fff;
+  --flow-number-height:0.8rem;
 }
 
 * {
@@ -213,6 +214,8 @@ html body {
 
 .flow-number {
   color: var(--gray-600);
+  display: inline-block;
+  height: var(--flow-number-height);
 }
 
 /*0-20 stage*/
@@ -258,7 +261,7 @@ html body {
 
 /*control bg height*/
 .flow [class^="flow__"][class$="__bg"] {
-  height: calc(100% - 0.5rem);
+  height: calc(100% - var(--flow-number-height));
 }
 
 /*extra two blocks*/
@@ -271,11 +274,11 @@ html body {
 /*control extra blocks height*/
 .flow [class^="flow__extra__"] {
   margin-left: 5px;
-  height: calc(100% - 0.5rem);
+  height: calc(100% - var(--flow-number-height));
   background-color: var(--gray-600);
   width: 5px;
   display: inline-block;
-  margin-top: 0.8rem;
+  margin-top: var(--flow-number-height);
 }
 
 /*show used flow*/
@@ -285,19 +288,14 @@ html body {
 
 /*used flow container*/
 .used__flow__overlay {
-  margin-top: 0.8rem;
-  height: calc(100% - 0.5rem);
+  margin-top: var(--flow-number-height);
+  height: calc(100% - var(--flow-number-height));
   width: calc(27.43 * var(--unit-width));
   background-color: var(--yellow);
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-/*show number*/
-.used__flow__overlay span {
-  font-weight: 400;
 }
 
 /*disconnect button container*/
