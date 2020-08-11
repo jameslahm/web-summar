@@ -1,0 +1,392 @@
+/*variables*/
+html {
+  --bg-red: #f9d3d8;
+  --bg: #e6e6e6;
+  --red: #e64e2e;
+  --yellow: #fbb03b;
+  --gray-600: #a29b9e;
+  --gray-500: #cfc8cb;
+  --gray-400: #dbd5d7;
+  --gray-300: #e7e3e4;
+  --gray-200: #ece9eb;
+  --gray-100: #f2f2f2;
+  --accent: #c0bdcc;
+  --text-accent: #666471;
+  --header-height: 100px;
+  --icon-info-url: url("https://net.tsinghua.edu.cn/image/wireless/popup_info.gif");
+  --icon-lib-url: url("https://net.tsinghua.edu.cn/image/wireless/popup_lib.gif");
+  --icon-learn-url: url("https://net.tsinghua.edu.cn/image/wireless/popup_learn.gif");
+  --icon-mail-url: url("https://net.tsinghua.edu.cn/image/wireless/popup_mail.gif");
+  --text--icon: #b85a54;
+  --unit-width: 5px;
+  --white: #fff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html body {
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
+#root {
+  min-height: 100%;
+  width: 100%;
+  background-color: var(--bg);
+  background-image: linear-gradient(190deg, var(--bg-red), var(--bg) 30%);
+  background-size: 100% var(--header-height);
+  background-repeat: no-repeat;
+  overflow: auto;
+}
+
+/*Text Style */
+.heading-1 {
+  font-size: 4rem;
+}
+
+.heading-2 {
+  font-size: 1.4rem;
+}
+
+.heading-3 {
+  font-size: 1rem;
+}
+
+.text-thin {
+  font-weight: 300;
+}
+
+.body-text {
+  font-size: 0.8rem;
+}
+
+.helper-text {
+  font-size: 0.5rem;
+}
+
+.container {
+  width: 100%;
+  max-width: 560px;
+  margin: auto;
+  position: relative;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 5rem;
+}
+
+/*Welcome Style*/
+#welcome {
+  background-color: var(--red);
+  height: 200px;
+  position: absolute;
+  left: 0px;
+  top: 5rem;
+  width: 100%;
+  max-width: 450px;
+  margin-left: 1rem;
+  color: var(--white);
+}
+
+/*Red Triangle Style*/
+#welcome::after {
+  display: block;
+  content: "";
+  position: absolute;
+  left: 2rem;
+  top: 100%;
+  width: 0;
+  border: 20px solid var(--red);
+  border-color: var(--red) transparent transparent var(--red);
+}
+
+.welcome__text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 1rem;
+  width: 100px;
+  height: 100%;
+}
+
+.welcome__text--P {
+  padding-left: 1rem;
+}
+
+/*Square block Style*/
+.square__block {
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: var(--white);
+  display: block;
+}
+
+.welcome__text-container .square__block__1 {
+  position: absolute;
+  left: 1rem;
+  top: 2.5rem;
+}
+
+.welcome__text-container .square__block__2 {
+  position: absolute;
+  left: 1rem;
+  top: 4.5rem;
+}
+
+
+
+/*Detail Style*/
+#detail {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  background-color: var(--gray-100);
+  position: relative;
+  max-width: 400px;
+  width: 100%;
+  height: 250px;
+  left: 5rem;
+  top: 2rem;
+  padding: 1rem;
+}
+
+/*extra shadow triangle*/
+#detail::after {
+  display: block;
+  content: "";
+  position: absolute;
+  right: -1rem;
+  bottom: calc(75px - 1rem);
+  width: 0;
+  border: 8px solid var(--gray-200);
+  border-color: transparent transparent var(--gray-500) var(--gray-500);
+}
+
+.detail__username {
+  color: var(--red);
+  font-weight: 400;
+}
+
+.detail__text--description {
+  flex: 0 1 0;
+  padding-right: 1rem;
+  text-align: right;
+}
+
+.detail__text--description-cn {
+  min-width: max-content;
+  display: inline-block;
+}
+
+.connected__time {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.connected__time__number {
+  color: var(--red);
+  font-size: 2rem;
+}
+
+/*Used Flow Style*/
+.used__flow {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  margin-top: 10px;
+}
+
+.flow__graph {
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  flex: 1 0 auto;
+  position: relative;
+}
+
+.flow-number {
+  color: var(--gray-600);
+}
+
+/*0-20 stage*/
+.flow__0-20 {
+  width: calc(20 * var(--unit-width));
+}
+
+.flow__0-20__bg {
+  background-color: var(--gray-200);
+}
+
+/*20-30 stage*/
+.flow__20-30 {
+  width: calc(10 * var(--unit-width));
+}
+
+.flow__20-30__bg {
+  background-color: var(--gray-300);
+}
+
+/*30-40 stage*/
+.flow__30-40 {
+  width: calc(10 * var(--unit-width));
+}
+
+.flow__30-40__bg {
+  background-color: var(--gray-400);
+}
+
+/*40-50 stage*/
+.flow__40-50 {
+  width: calc(10 * var(--unit-width));
+}
+
+.flow__40-50__bg {
+  background-color: var(--gray-500);
+}
+
+.flow {
+  height: 100%;
+  text-align: right;
+}
+
+/*control bg height*/
+.flow [class^="flow__"][class$="__bg"] {
+  height: calc(100% - 0.5rem);
+}
+
+/*extra two blocks*/
+.flow__extra {
+  width: 30px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+/*control extra blocks height*/
+.flow [class^="flow__extra__"] {
+  margin-left: 5px;
+  height: calc(100% - 0.5rem);
+  background-color: var(--gray-600);
+  width: 5px;
+  display: inline-block;
+  margin-top: 0.8rem;
+}
+
+/*show used flow*/
+.used__flow__overlay__container {
+  position: absolute;
+}
+
+/*used flow container*/
+.used__flow__overlay {
+  margin-top: 0.8rem;
+  height: calc(100% - 0.5rem);
+  width: calc(27.43 * var(--unit-width));
+  background-color: var(--yellow);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*show number*/
+.used__flow__overlay span {
+  font-weight: 400;
+}
+
+/*disconnect button container*/
+.disconnect__button__container {
+  position: absolute;
+  right: -1rem;
+  bottom: -1rem;
+  width: 150px;
+  height: 75px;
+  padding: 1rem;
+  background-color: var(--white);
+}
+
+/*disconnect button Style*/
+.disconnect__button__container .disconnect__button {
+  background-color: var(--accent);
+  outline: none;
+  border: none;
+  color: var(--text-accent);
+  font-size: 1.1rem;
+  height: 100%;
+}
+
+
+
+/*footer links*/
+.link-footer {
+  margin-top: 4rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.link-footer__list {
+  display: flex;
+  list-style: none;
+}
+
+.link-footer__list__item {
+  margin-left: 1rem;
+  width: fit-content;
+  color: var(--text--icon);
+}
+
+/*link icons*/
+.link-footer__list__item .icon {
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+  vertical-align: bottom;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.icon-mail {
+  background-image: var(--icon-mail-url);
+}
+
+.icon-info {
+  background-image: var(--icon-info-url);
+}
+
+.icon-lib {
+  background-image: var(--icon-lib-url);
+}
+
+.icon-learn {
+  background-image: var(--icon-learn-url);
+}
+
+/*adapt mobile devices*/
+@media (max-width: 550px) {
+  html {
+    --unit-width: 4px;
+    font-size: 14px;
+  }
+  #detail {
+    max-width: 300px;
+  }
+  #welcome {
+    max-width: 350px;
+  }
+  .welcome__text-container .square__block__1 {
+    top: 2.8rem;
+  }
+  #detail {
+    height: 230px;
+  }
+  .container {
+    max-width: 450px;
+  }
+}
