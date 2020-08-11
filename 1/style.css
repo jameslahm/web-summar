@@ -174,7 +174,7 @@ html body {
 
 .detail__text--description {
   flex: 0 1 0;
-  padding-right: 1rem;
+  margin-right: 1rem;
   text-align: right;
 }
 
